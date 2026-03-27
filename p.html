@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archive | Curated Literature</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="nav-content">
+            <h1 class="brand" onclick="showSection('all')">THE ARCHIVE</h1>
+            <div class="nav-links">
+                <button onclick="showSection('all')" id="allLink" class="active">Catalog</button>
+                <button onclick="showSection('favs')" id="favLink">My Reading List (<span id="favCount">0</span>)</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="catalog-header">
+        <div class="header-inner">
+            <h2 id="pageTitle">Browse the Collection</h2>
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search by title, author, or ISBN...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="genre-nav" id="genreNav">
+            <button class="genre-btn active" data-filter="all">All Genres</button>
+            <button class="genre-btn" data-filter="Classic">Classics</button>
+            <button class="genre-btn" data-filter="Sci-Fi">Sci-Fi</button>
+            <button class="genre-btn" data-filter="Dystopian">Dystopian</button>
+            <button class="genre-btn" data-filter="Literary">Literary Fiction</button>
+        </div>
+
+        <section id="bookGrid" class="book-grid"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
